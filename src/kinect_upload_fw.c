@@ -267,7 +267,7 @@ int main(int argc, char *argv[]) {
 		goto out;
 	}
 
-	libusb_set_debug(NULL, 3);
+	libusb_set_option(NULL, LIBUSB_OPTION_LOG_LEVEL, 3);
 
 	dev = libusb_open_device_with_vid_pid(NULL, KINECT_AUDIO_VID, KINECT_AUDIO_PID);
 	if (dev == NULL) {
